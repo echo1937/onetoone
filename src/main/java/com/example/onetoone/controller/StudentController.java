@@ -17,4 +17,9 @@ public class StudentController {
     public Object getStudent(@PageableDefault Pageable pageable) {
         return studentRepository.findCustom(pageable);
     }
+
+    @GetMapping("getStudentByArgsCloseProjection")
+    public Object getStudentByArgsCloseProjection(@PageableDefault Pageable pageable) {
+        return studentRepository.findCustomByArgs(pageable);
+    }
 }
