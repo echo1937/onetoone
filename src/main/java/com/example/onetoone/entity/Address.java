@@ -20,6 +20,6 @@ public class Address {
     private String street;
     private String zipCode;
     @JsonIgnore
-    @OneToOne(mappedBy = "address") // 要么拆掉双向关系，要么使用@JsonIgnore，否则序列化会产生
+    @OneToOne(mappedBy = "address") // 要么拆掉双向关系，要么使用@JsonIgnore，否则序列化会抛异常
     private Person person;
 }
